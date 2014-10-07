@@ -845,14 +845,14 @@ void retract_z_probe() {
   destination[Z_AXIS] = current_position[Z_AXIS] + 40; // T3P3 Kossel Mini 
   prepare_move_raw();
 
-  destination[X_AXIS] = -61;
-  destination[Y_AXIS] = 66;
-  destination[Z_AXIS] = 35;
+  destination[X_AXIS] = -62;
+  destination[Y_AXIS] = 65;
+  destination[Z_AXIS] = 25;
   prepare_move_raw();
 
   // Move the nozzle below the print surface to push the probe up.
   feedrate = homing_feedrate[Z_AXIS]/10;
-  destination[Z_AXIS] = current_position[Z_AXIS] - 30;
+  destination[Z_AXIS] = current_position[Z_AXIS] - 20;
   prepare_move_raw();
 
   feedrate = homing_feedrate[Z_AXIS];
