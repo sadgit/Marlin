@@ -351,6 +351,13 @@ static void lcd_extrude(float length, float feedrate) {
   #endif
 }
   
+
+static void lcd_level()
+{
+	g28();
+	g29();
+}
+
 static void lcd_purge()
 {
 	lcd_extrude(LCD_PURGE_LENGTH, LCD_PURGE_FEEDRATE/60);
@@ -391,6 +398,7 @@ static void lcd_prepare_menu()
     MENU_ITEM(function, MSG_PREHEAT_PLA, lcd_preheat_pla);
     MENU_ITEM(function, MSG_PREHEAT_ABS, lcd_preheat_abs);
     MENU_ITEM(function, MSG_COOLDOWN, lcd_cooldown);
+	MENU_ITEM(function, MSG_BED_LEVEL, lcd_level);
 #if defined(EASY_LOAD) 
     MENU_ITEM(function, MSG_E_BOWDEN_LENGTH, lcd_easy_load);
     MENU_ITEM(function, MSG_R_BOWDEN_LENGTH, lcd_easy_unload);

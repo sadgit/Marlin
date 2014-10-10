@@ -93,6 +93,8 @@ FORCE_INLINE void serialprintPGM(const char *str)
 
 void get_command();
 void process_commands();
+void g28();
+void g29();
 
 void manage_inactivity();
 
