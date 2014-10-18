@@ -320,7 +320,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 #define INVERT_X_DIR false    // for Mendel set to false, for Orca set to true
 #define INVERT_Y_DIR false    // for Mendel set to true, for Orca set to false
 #define INVERT_Z_DIR false    // for Mendel set to false, for Orca set to true
-#define INVERT_E0_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
+#define INVERT_E0_DIR true   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E1_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 #define INVERT_E2_DIR false   // for direct drive extruder v9 set to true, for geared extruder set to false
 
@@ -352,7 +352,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // For deltabots this means top and center of the cartesian print volume.
 #define MANUAL_X_HOME_POS 0
 #define MANUAL_Y_HOME_POS 0
-#define MANUAL_Z_HOME_POS 234.1  // For delta: Distance between nozzle and print surface after homing.T3P3:default is 250
+#define MANUAL_Z_HOME_POS 240 // 234.1  // For delta: Distance between nozzle and print surface after homing.T3P3:default is 250
 
 
 #define AUTOLEVEL_GRID 22  // Distance between autolevel Z probing points, should be less than print surface radius/3.
@@ -367,7 +367,7 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // default settings
 
 //#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 80, 650} // T3P3 for 20T pulleys & RRP mini geared extruder
-#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 80, 639} // T3P3 for 20T pulleys & RRP mini geared extruder
+#define DEFAULT_AXIS_STEPS_PER_UNIT   {80, 80, 80, 524.2} // T3P3 for 20T pulleys & RRP mini geared extruder
 #define DEFAULT_MAX_FEEDRATE          {1000, 1000, 1000, 800}    // (mm/sec) T3P3: defaults {200, 200, 200, 200} 
 #define DEFAULT_MAX_ACCELERATION      {9000,9000,9000,9000}    // X, Y, Z, E maximum start speed for accelerated moves. E default values are good for skeinforge 40+, for older versions raise them a lot.
 
@@ -395,14 +395,14 @@ const bool Z_MAX_ENDSTOP_INVERTING = false; // set to true to invert the logic o
 // M501 - reads parameters from EEPROM (if you need reset them after you changed them temporarily).
 // M502 - reverts to the default "factory settings".  You still need to store them in EEPROM afterwards if you want to.
 //define this to enable eeprom support
- #define EEPROM_SETTINGS // T3P3 default is off during calibration. Turn on afterwards if preferred.
+#define EEPROM_SETTINGS // T3P3 default is off during calibration. Turn on afterwards if preferred.
 //to disable EEPROM Serial responses and decrease program space by ~1700 byte: comment this out:
 // please keep turned on if you can.
- #define EEPROM_CHITCHAT // T3P3 default is off during calibration. Turn on afterwards if preferred.
+#define EEPROM_CHITCHAT // T3P3 default is off during calibration. Turn on afterwards if preferred.
 
  //Filament management (added by T3P3 based on https://github.com/lajos/Marlin/blob/tantillus/Marlin)
 #define EASY_LOAD					
-#define BOWDEN_LENGTH 560
+#define BOWDEN_LENGTH 510
 #define LCD_PURGE_LENGTH 3				
 #define LCD_RETRACT_LENGTH 3			
 #define LCD_PURGE_FEEDRATE 200		
